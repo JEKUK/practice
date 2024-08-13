@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box_warp{width: 500px;
+            height: 200px;
+            position: relative;
+            border: 1px solid black
+
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .box:nth-child(1) {
+            background-color: red;
+            left: 0;
+            top: 0;
+
+        }
+
+        .box:nth-child(2) {
+            background-color: green;
+            left: 20px;
+            top: 20px;
+        }
+
+        .box:nth-child(3) {
+            background-color: blue;
+            left: 40px;
+            top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box_warp">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    </div>
+</body>
+
+</html>

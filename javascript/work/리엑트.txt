@@ -1,0 +1,36 @@
+https://www.gdweb.co.kr/main/
+
+구글 MAP API KEY
+AIzaSyCi36s8SAwoRdUQLvVgdvbGrzx84AcMNn4
+구글 지도
+npm install @googlemaps/react-wrapper
+
+npm install @react-google-maps
+
+
+선생님 이메일
+kjy.devops@gmail.com
+자소서 포트폴리오 보내기
+
+리엑트 설치
+
+1. 인터넷 창에서 node.js 설치 LTS 버전
+
+2. 터미널에서 node -v 로 버전 확인
+
+3. npm -v 버전 확인 
+
+4. npx -v 
+
+5. npx create-react-app 프로젝트 이름
+
+6. npm rm -g create-react-app 지우는 명령어
+   npm install create-react-app 설치 	
+   npm install classnames  
+   npm install react-router-dom@+버전 숫자  라우터 준비
+  npm install styled-components 스타일 모듈
+npm install react-kakao-maps-sdk 카카오 지도 
+
+7. npm run start
+
+8. 컨트롤 C 누르면 프로젝트 종료

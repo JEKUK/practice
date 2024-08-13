@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{margin: 0;
+        padding: 0;}
+        #wrap_big{
+            width: 1200px;
+            height: 250px;
+            position:relative;
+            margin: 0 auto;
+           
+            
+        }
+        #wrap_big div#wrap_bottom{
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            bottom: 0; left: 0;
+            
+            
+        }
+
+        #wrap_25{
+            width: 25%;
+            height: 80px;
+            
+            position: absolute;
+            left: 0; top: 0;
+        }
+        #wrap_75{
+            width: 75%;
+            height: 80px;
+           
+            position: absolute;
+            right: 0; top: 0;
+            
+        }
+
+        #wrap_75_00{
+            width: 100%;
+            height: 80px;
+           
+            position: relative;
+            right: 0; top: 0;
+            
+            
+        }
+    
+
+     #left{
+        list-style: none;
+        float:left;
+   width: 12.5%;
+   height: 80px;
+        
+     } 
+      
+        ul#wrap_75_00>li#left:nth-child(1){background-color: red;}
+        ul#wrap_75_00>li#left:nth-child(2){background-color:orange;}
+        ul#wrap_75_00>li#left:nth-child(3){background-color: yellow;}
+        ul#wrap_75_00>li#left:nth-child(4){background-color: green;}
+        ul#wrap_75_00>li#left:nth-child(5){background-color: blue;}
+        ul#wrap_75_00>li#left:nth-child(6){background-color: indigo;}
+        ul#wrap_75_00>li#left:nth-child(7){background-color: purple;}
+        ul#wrap_75_00>li#left:nth-child(8){background-color: black;} 
+        
+
+         
+       
+    </style>
+</head>
+<body>
+    <div id="wrap_big">
+        <div id="wrap_bottom">
+            <div id="wrap_25"></div>
+        
+        <div id="wrap_75">
+                <ul id="wrap_75_00" >
+                    <li id="left"></li>
+                    <li id="left"></li>
+                    <li id="left"></li>
+                    <li id="left"></li>
+                    <li id="left"></li>
+                    <li id="left"></li>
+                    <li id="left"></li>
+                    <li id="left"></li>
+                </ul>
+        </div>
+</div>
+    </div>
+   
+</body>
+</html>
+
+!

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 기본적으로 브라우저마다 형식이 다르다. 그렇기 때문에 *를 이용하여 마진 
+        패딩 폰트사이즈를 초기화시켜주어야 한다. */
+
+        * {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box_warp {
+            width: 1200px;
+            height: 100vh;
+            /* margine처리를 해서 센터링작업을 할 것. vh=보여지는것 만큼의 비율*/
+            margin: 0 auto;
+            background-color: rgb(176, 176, 176);
+            overflow: hidden;
+        }
+
+        #header {
+            width: 1200px;
+            height: 200px;
+            position: relative;
+            background-color: rgb(113, 113, 113);
+        }
+
+        #header ul#nav {
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        #header ul#top_banner {
+            width: 240px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-right: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        #header ul#nav>li {
+            width: 25%;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+
+
+
+        #header ul#top_banner>li {
+            margin-left: 5px;
+
+            float: left;
+
+        }
+
+        #header ul#top_banner>li:first-child {
+            margin-left: 50px;
+        }
+
+
+        #content {
+            width: 100%;
+            height: 800px;
+            background-color: rgb(255, 96, 96);
+            overflow: hidden;
+        }
+
+
+        #content div#content_body {
+            width: 100%;
+            height: 600px;
+overflow: hidden;           
+            background-color: aqua;
+        }
+
+        #content div#content-footer{
+            width: 100%;
+            height: 200px;
+            background-color: blueviolet;
+        }
+       
+        #content div#content_body div#aside
+    {
+        width: 25%;
+        height: 100%;
+        float: left;
+        background-color: blue;
+    }
+
+    #content div#content_body div#section
+{
+    width: 75%;
+    height: 100%;
+    float: left;
+    background-color: blanchedalmond;
+}
+
+#content div#content_body ul#side-menu > li{
+    width: 50%;
+    height: 30px;
+text-align: center;
+line-height: 30px;
+
+margin-left: 25%;
+background-color: brown;
+font-size: 16px;
+font-weight: 400;
+border-bottom: 1px solid black;
+}
+
+#content div#content_body div#aside ul#side-menu > li:hover{
+    cursor: pointer;
+    background-color: white;
+    font-weight: 600;
+}
+
+#content div#content_body div#section > div{
+    width: 50%;
+    height: 100%;
+
+    float: left;
+    background-color: yellowgreen;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="box_warp">
+        <div id=header>
+            <ul id="nav">
+                <li>home</li>
+                <li>회사소개</li>
+                <li>포트폴리오</li>
+                <li>채용</li>
+            </ul>
+            <ul id="top_banner">
+                <li>로그인 |</li>
+                <li>회원가입 |</li>
+                <li>비밀번호찾기 </li>
+            </ul>
+        </div>
+
+
+        <div id="content">
+            <div id="content_body">
+                <div id="aside">
+                    <ul id="side-menu">
+                        <li>회원목록</li>
+                        <li>회원등록</li>
+                        <li>회원수정</li>
+                        <li>회원삭제</li>
+                    </ul>
+                </div>
+                <div id="section">
+                    <div ></div>
+                    <div ></div>
+                </div>
+            </div>
+            <div id="content-footer"></div>
+        </div>
+    </div>
+</body>
+
+</html>

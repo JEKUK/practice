@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box1 {
+            width: 80%;
+            min-width: 1024px;
+            max-width: 1024px;
+            height: 700px;
+            background-color: blue;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #box1>div:nth-child(1) {
+            position: relative;
+            height: 200px;
+        }
+
+        
+
+        #box1 > div:nth-child(1) div#top-left-box {
+           position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #box1 > div:nth-child(1) div#top-right-box {
+            position: absolute;
+            right: 0; 
+            top: 0;
+        }
+
+        .box_200 {
+            width: 200px;   
+            height: 200px;
+            
+
+        }
+
+        .red {
+            background-color: red;
+        }
+
+       #center{
+        display: block;
+        margin: 0 auto;
+       }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div id="box1">
+        <div>
+            <div id="top-right-box" class="box_200 red"></div>
+            <div id="top-left-box" class="box_200 red"></div>
+        </div>
+
+        <div id="center" class="box_200 red "></div>
+    </div>
+
+
+
+</body>
+
+</html>

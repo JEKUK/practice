@@ -1,0 +1,34 @@
+t제이쿼리
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+아이콘
+iconify
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+fontawesome
+<script src="https://kit.fontawesome.com/1edf72a888.js" crossorigin="anonymous"></script>
+
+이미지
+https://pixabay.com/ko/
+
+슬라이더
+slick
+
+jQuery CDN
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+https://releases.jquery.com
+
+JQuery CDN 3.6.4 ver
+<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+
+adobe color
+
+색상 그라데이션
+https://coolors.co/
+
+피그마 플러그인 
+unsplash
+material symbols

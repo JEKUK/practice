@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.js"
+    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    p {
+      cursor: pointer;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <p title="Tulips">튜울립</p>
+    <p title="Chrysanthemum">국화</p>
+    <p title="koala">코알라</p>
+    <p title="Hydrangeas">수국</p>
+  </body>
+  <script>
+    const imgArr = ["튤립.jpg", "국화.jpg", "코알라.jpg", "수국.jpg"];
+
+    $("p").on("click", function () {
+      //   alert("클릭");
+      const index = $(this).index();
+      // 요소 내부에 추가
+      //   $(this).append(`<img src =" ../resources/img/${imgArr[index]}"/>`);
+      // $(`<img src =" ../resources/img/${imgArr[index]}"/>`).appendTo(this);
+      //   $(this).prepend(`<img src =" ../resources/img/${imgArr[index]}"/>`);
+      //   $(`<img src =" ../resources/img/${imgArr[index]}"/>`).prependTo(this);
+      // 요소 외부의 추가
+      // $(this).after(`<img src =" ../resources/img/${imgArr[index]}"/>`);
+      // $(`<img src =" ../resources/img/${imgArr[index]}"/>`).insertAfter(this);
+      // $(this).before(`<img src =" ../resources/img/${imgArr[index]}"/>`);
+      $(`<img src =" ../resources/img/${imgArr[index]}"/>`).insertBefore(this);
+    });
+  </script>
+</html>

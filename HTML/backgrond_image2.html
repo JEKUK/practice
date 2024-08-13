@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            width: 80px;
+            height: 120px;
+        }
+
+        .image {
+            width: 80px;
+            height: 120px;
+            background-color: black;
+            float: left;
+            margin-right: 5px;
+        }
+
+        div#box > div{background-repeat: no-repeat;
+        background-position: center;
+    background-size: contain;}
+    
+        div#box > div.image:nth-child(1) {
+            background-color: red;
+            background-image:url(images/1.jpg);
+        }
+
+        div#box >div.image:nth-child(2) {
+            background-color: blue;
+            background-image:url(images/2.jpg);
+        
+        }
+
+        div#box >div.image:nth-child(3) {
+            background-color: green;
+            background-image:url(images/3.jpg);
+        }
+        </style>
+</head>
+
+<body>
+    <img src="1.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">                                      
+    <hr />
+    <div id="box">
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div> 
+     
+    </div>
+</body>
+
+</html>

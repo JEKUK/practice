@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basic_Form</title>
+</head>
+
+<body>
+    <form>
+        <!--사용자가 입력하는 방식-->
+        <lable for="id"> 아이디: </lable> <input type="text" id="id" name="text" value="text"><br />
+        <label for="pwd">패스워드</label><input type="password" id="pwd" name="password" value="password"><br />
+        <label for="file" style="display:block; 
+        width:80px;
+        border:1px solid black;
+        text-align: center;
+        cursor: pointer;
+        background-color: lightgray;
+        font-size: 0.8em;">파일선택</label>
+        <input type="file" id="file" name="file" value="file"><br />
+        <label for="check">체크</label><input type="checkbox" id="check" name="checkbox" value="checkbox"><br />
+        <label for="radio">라디오</label><input type="radio" id="radio" name="radio" value="radio"><br />
+
+        <!--보이지않는 입력 양식 -->
+        <input type="hidden" name="hidden" value="hidden"><br />
+
+        <!--버튼-->
+        <input type="button" value="button"><br />
+        <input type="reset" value="reset"><br />
+        <input type="submit" value="submit"><br>
+        <input type="image" src="https://via.placeholder.com/300x400">
+    </form>
+</body>
+
+</html>

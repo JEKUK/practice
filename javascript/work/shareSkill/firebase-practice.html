@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div{
+    box-shadow: 0,4px,4px, rgba(0,0,0,0.5);
+  }
+  p{
+    display: flex;
+    gap : 10px
+  }
+  p label{
+    display: flex;
+    justify-content: space-between;
+    width:80px;
+  }
+  .selected{
+    background-color: yellow;
+  }
+  tr{
+    cursor: pointer;
+    height: 50px;
+  }
+</style>
+<body>
+  <div>
+    <p>
+      <label for="name"><span>이름</span> <span>:</span> </label>
+      <input type="text"  name="name">
+    </p>
+    <p>
+      <label for="age"><span>나이</span> <span>:</span> </label>
+      <input type="text"  name="age">
+    </p>
+    <p>
+      <label for=""><span>아이디</span> <span>:</span> </label>
+      <input type="text"  name="id">
+    </p>
+    <p>
+      <label for=""><span>성별</span> <span>:</span> </label>
+      <input type="text"  name="gender">
+    </p>
+    <p>
+      <label for=""><span>전화번호</span> <span>:</span> </label>
+      <input type="text"  name="tel">
+    </p>
+    <p>
+      <button id="saveBtn">데이터 저장</button>
+    </p>
+  </div>
+  <table border="1">
+    <tr>
+       <th>이름</th>
+       <th>나이</th>
+       <th>성별</th>
+       <th>아이디</th>
+       <th>전화번호</th>
+    </tr>
+  </table>
+  <br>
+    <button id="deletBtn">데이터 삭제</button>
+    <button id="updateBtn">데이터 수정</button>
+</body>
+<script type="module">
+  import * as firebase from "../resources/js/fireBase.js"
+  const  {db, getDocs, collection, getDatas, setDoc, addDoc,doc,addDatas,app,deleteDatas,updateDoc,updateDatas} = firebase;
+  // 문서 아이디 부여
+  // async function addMember(dataObj){
+  //   await setDoc(doc(db,"member","member1"),dataObj);
+  // }
+  // 문서 아이디 자동
+  // async function addMember(dataObj){
+  //   await addDoc(collection(db,"member"),dataObj)
+  // }
+  
+  const memberTable = document.querySelector("table")
+  async function getmembers(){
+    const snapshot = await getDatas("member")
+    snapshot.forEach(doc =>{
+      const  {memberName,memberAge,memberGender,memberTel,memberId} = doc.data();
+      memberTable.insertAdjacentHTML("beforeend",
+      `
+      <tr>
+        <td>${memberName}</td>
+        <td>${memberAge}</td>
+        <td>${memberGender}</td>
+        <td>${memberId}</td>
+        <td>${memberTel}</td>
+        <input type="hidden" value="${doc.id}">
+      </tr>
+      `
+        );
+    })
+  }
+  getmembers().then(function (){
+    const trs = document.querySelectorAll("tr");
+      trs.forEach((el) => {
+        el.addEventListener("click", function (e) {
+          if(e.target.tagName !="TH"){
+            el.classList.toggle("selected");
+          }
+        });
+      });
+    })
+
+  const updateBtn = document.querySelector("#updateBtn")
+  updateBtn.addEventListener("click",function(){
+    const updateObj = {
+        memberId: "ljh0609",
+        memberTel: "01012345678",
+      };
+      // const memberRef = doc(db, "member", "member1");
+      // updateDoc(memberRef, {
+      //   memberId: "ljh0609",
+      //   memberTel: "01012345678",
+      //   memberTell: deleteField(),
+      // });
+    updateDatas("member","member1",updateObj).then(()=>window.location.reload())
+
+    // updateDatas(memberRef).then(()=> window.location.reload())
+  })
+
+  const btn = document.querySelector("#saveBtn")
+  const deletBtn = document.querySelector("#deletBtn");
+    deletBtn.addEventListener("click",function(){
+      const selectedTrs = memberTable.querySelectorAll("[class=selected]");
+      if (selectedTrs.length == 0){
+        alert("삭제할 데이터가 없습니다.");
+        return;
+      }
+      selectedTrs.forEach((el => {
+        const docId = el.lastElementChild.value;
+        deleteDatas("member",docId).then(function(){
+          window.location.reload()
+        })
+      }))
+    })
+
+
+  btn.addEventListener("click", function(){
+    const memberInfo = {
+      memberAge: document.querySelector("input[name=age]").value, 
+      memberGender: document.querySelector("input[name=gender]").value, 
+      memberId: document.querySelector("input[name=id]").value,
+      memberName: document.querySelector("input[name=name]").value, 
+      memberTel: document.querySelector("input[name=tel]").value,
+    };
+    addDatas("member",memberInfo).then(function(){
+      window.location.reload();
+    });
+  })
+</script>
+<script>
+
+</script>
+</html>

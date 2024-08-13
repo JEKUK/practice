@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let i = 0;
+    for (let i; i < 10; i++) {
+      document.write("카운터 : " + i + "<br/>");
+    }
+
+    document.write("<br/>");
+
+    let sum = 0;
+    let str = "";
+    for (let j = 1; j <= 5; j++) {
+      sum = sum + j;
+      // 각각 의 i 값의 합을 1부터 5까지 '문자열'로 표현
+      if (j == 1) {
+        str += j;
+      } else {
+        str += "+" + j;
+      }
+      console.log(j);
+      document.write(str + "=" + sum);
+
+      document.write("<br>");
+    }
+  </script>
+</html>

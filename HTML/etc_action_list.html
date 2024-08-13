@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <Style>
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            width: 150px;
+            float: left;
+            list-style: none;
+            text-align: center;
+            padding: 15px;
+            background: gray;
+            color: white;
+            cursor: pointer;
+        }
+
+        ul li:hover {
+            background-color: lightgray;
+        }
+
+        ul li:active {
+            background-color: coral;
+        }
+
+        li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+
+        li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        li:nth-child(2n) {
+            background: lightgreen;
+        }
+
+        li:nth-child(2n+1) {
+            background: lightseagreen
+        }
+       ul li > a{text-decoration: none;
+    color:white}
+    </Style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="https://www.naver.com">naver</a></li>
+        <li><a href="https://www.google.com">google</a></li>
+        <li><a href="https://www.daum.com">daum</a></li>
+        <li><a href="http://www.tjdaewoo.co.kr/">DW Academy</a></li>
+    </ul>
+</body>
+
+</html>
